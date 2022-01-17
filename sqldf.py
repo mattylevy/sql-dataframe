@@ -14,6 +14,6 @@ def SQL_df(sql_query_input, driver, server_name):
     cnxn = pyc.connect(conn_str)
 
     # SQL to DataFrame
-    data_frame = pd.read_sql_query(sql_query_input, con=cnxn)
+    data_frame = pd.read_sql_query(sql_query_input, con=cnxn) # ,params = (x, y, n) use params argument to pass variables to SQL query
 
     return data_frame
